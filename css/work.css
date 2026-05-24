@@ -1,0 +1,64 @@
+/* Work page details */ 
+ 
+.work-intro { 
+  position: relative; 
+} 
+ 
+.work-intro::after { 
+  position: absolute; 
+  right: 28px; 
+  bottom: 28px; 
+  width: 54px; 
+  height: 54px; 
+  content: ""; 
+  border-right: 1px solid rgba(157, 81, 101, 0.26); 
+  border-bottom: 1px solid rgba(157, 81, 101, 0.26); 
+} 
+ 
+.project-card { 
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease; 
+} 
+ 
+.project-card.is-focused { 
+  border-color: rgba(157, 81, 101, 0.38); 
+  box-shadow: 0 26px 82px rgba(88, 60, 72, 0.18); 
+  transform: translateY(-2px); 
+} 
+ 
+.project-summary { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 18px; 
+  max-width: 900px; 
+  margin-top: 20px; 
+  padding: 16px 20px; 
+  color: #5f4b52; 
+  background: rgba(255, 255, 255, 0.78); 
+  border: 1px solid rgba(255, 255, 255, 0.92); 
+  border-radius: 8px; 
+  box-shadow: 0 18px 54px rgba(88, 60, 72, 0.1); 
+  backdrop-filter: blur(12px); 
+} 
+ 
+.project-summary p { 
+  margin: 0; 
+  font-size: 0.95rem; 
+  line-height: 1.5; 
+} 
+ 
+.project-summary strong { 
+  color: #9d5165; 
+} 
+ 
+@media (max-width: 900px) { 
+  .project-card.is-focused { 
+    transform: none; 
+  } 
+ 
+  .project-summary { 
+    align-items: flex-start; 
+    flex-direction: column; 
+    padding: 16px; 
+  } 
+} 
